@@ -2,17 +2,17 @@
 
 import Link from 'next/link';
 import { motion } from 'motion/react';
-import { 
-  MonitorSmartphone, 
-  Download, 
-  Play, 
-  Wifi, 
-  Usb, 
-  Lock, 
-  MousePointer2, 
-  PenTool, 
-  Volume2, 
-  ClipboardCopy, 
+import {
+  MonitorSmartphone,
+  Download,
+  Play,
+  Wifi,
+  Usb,
+  Lock,
+  MousePointer2,
+  PenTool,
+  Volume2,
+  ClipboardCopy,
   Activity,
   CheckCircle2
 } from 'lucide-react';
@@ -34,8 +34,8 @@ export default function Home() {
             <MonitorSmartphone className="w-4 h-4" />
             <span>Host app only setup</span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -43,8 +43,8 @@ export default function Home() {
           >
             Turn your Android device into a low-latency remote display for Windows.
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -52,22 +52,22 @@ export default function Home() {
           >
             Canvex Display streams your Windows desktop to Android with secure pairing, adaptive quality, touch and pen input, audio support, clipboard sync, and file transfer.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
-            <a 
-              href="[PLAY_STORE_URL]" 
+            <a
+              href="[PLAY_STORE_URL]"
               className="w-full sm:w-auto flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
             >
               <Play className="w-5 h-5 fill-current" />
               Get it on Google Play
             </a>
-            <a 
-              href="/downloads/CanvexDisplay_Setup_0.3.0.msi" 
+            <a
+              href="/downloads/CanvexDisplay_Setup_0.3.0.msi"
               className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-xl font-semibold transition-all"
             >
               <Download className="w-5 h-5" />
@@ -75,7 +75,7 @@ export default function Home() {
             </a>
           </motion.div>
 
-          <motion.div 
+          <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5, delay: 0.5 }}
@@ -95,7 +95,7 @@ export default function Home() {
             <h2 className="text-3xl md:text-4xl font-display font-bold text-white mb-4">Get Canvex Display</h2>
             <p className="text-slate-400">No separate driver package required. Just install the Windows host app and the Android app.</p>
           </div>
-          
+
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Android Card */}
             <div className="bg-slate-950 border border-white/10 rounded-3xl p-8 flex flex-col items-center text-center hover:border-cyan-500/30 transition-colors">
@@ -106,8 +106,8 @@ export default function Home() {
               <p className="text-slate-400 mb-8 flex-grow">
                 Install the Canvex Display mobile app on your Android phone or tablet. Android 8.0+ recommended.
               </p>
-              <a 
-                href="[PLAY_STORE_URL]" 
+              <a
+                href="[PLAY_STORE_URL]"
                 className="w-full flex items-center justify-center gap-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/20 px-6 py-3 rounded-xl font-medium transition-all"
               >
                 <Play className="w-5 h-5" />
@@ -122,10 +122,10 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-display font-semibold text-white mb-2">Windows Host</h3>
               <p className="text-slate-400 mb-8 flex-grow">
-                Install the Windows host app to stream your desktop to Android. Windows 10/11 x64.
+                Transform your PC into a low-latency streaming server. Download the host application for Windows 10/11 (x64) to begin your session.
               </p>
-              <a 
-                href="/downloads/CanvexDisplay_Setup_0.3.0.msi" 
+              <a
+                href="/downloads/CanvexDisplay_Setup_0.3.0.msi"
                 className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-6 py-3 rounded-xl font-medium transition-all"
               >
                 <Download className="w-5 h-5" />
@@ -145,42 +145,42 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <FeatureCard 
+            <FeatureCard
               icon={<Activity className="w-6 h-6 text-cyan-400" />}
               title="Low-latency display"
               description="Stream the active Windows desktop to Android with a responsive, session-oriented pipeline."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<PenTool className="w-6 h-6 text-cyan-400" />}
               title="Touch and pen input"
               description="Control host apps using tablet touch or stylus input, including pressure-aware pen workflows where supported."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Wifi className="w-6 h-6 text-cyan-400" />}
               title="Wi-Fi and USB"
               description="Use your local network by default, or switch to USB convenience routing when available."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Lock className="w-6 h-6 text-cyan-400" />}
               title="Secure pairing"
               description="Pair devices with a one-time code and keep trusted hosts available for quick reconnects."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Lock className="w-6 h-6 text-cyan-400" />}
               title="Encrypted transport"
               description="Control and media paths use authenticated session setup and encrypted transport."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Volume2 className="w-6 h-6 text-cyan-400" />}
               title="Audio streaming"
               description="Stream host audio to Android when supported by the current route and host runtime."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<ClipboardCopy className="w-6 h-6 text-cyan-400" />}
               title="Clipboard & files"
               description="Move text and files between devices with built-in transfer and clipboard tools."
             />
-            <FeatureCard 
+            <FeatureCard
               icon={<Activity className="w-6 h-6 text-cyan-400" />}
               title="Adaptive quality"
               description="Canvex monitors runtime conditions and adjusts stream behavior to improve startup and stability."
@@ -202,7 +202,7 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-8 relative">
             {/* Connecting Line */}
             <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
-            
+
             <div className="relative text-center">
               <div className="w-24 h-24 mx-auto bg-slate-950 border border-white/10 rounded-full flex items-center justify-center mb-6 relative z-10">
                 <span className="text-3xl font-display font-bold text-cyan-400">1</span>
@@ -210,7 +210,7 @@ export default function Home() {
               <h3 className="text-xl font-display font-semibold text-white mb-3">Install</h3>
               <p className="text-slate-400">Install the Windows host and the Android app.</p>
             </div>
-            
+
             <div className="relative text-center">
               <div className="w-24 h-24 mx-auto bg-slate-950 border border-white/10 rounded-full flex items-center justify-center mb-6 relative z-10">
                 <span className="text-3xl font-display font-bold text-cyan-400">2</span>
@@ -250,7 +250,7 @@ export default function Home() {
           <div className="mt-12 p-6 bg-cyan-500/5 border border-cyan-500/10 rounded-2xl">
             <h4 className="font-semibold text-cyan-400 mb-2">Wi-Fi is the default connection path.</h4>
             <p className="text-slate-400 text-sm mb-4">USB convenience routing may be available depending on your setup and bundled ADB support.</p>
-            
+
             <h4 className="font-semibold text-cyan-400 mb-2">First-frame recovery</h4>
             <p className="text-slate-400 text-sm">If the first frame takes time after a route change or fullscreen transition, Canvex Display can request a fresh keyframe automatically. A manual <strong>Request Keyframe</strong> action is also available in-session.</p>
           </div>
@@ -264,7 +264,7 @@ export default function Home() {
           <p className="text-slate-400 mb-8 max-w-2xl mx-auto">
             Canvex Display for Android uses Google Play entitlement for streaming access.
           </p>
-          
+
           <div className="grid sm:grid-cols-2 gap-6 text-left mb-10 max-w-2xl mx-auto">
             <div className="bg-slate-950 border border-white/10 p-6 rounded-2xl">
               <ul className="space-y-3 text-slate-300 text-sm">
@@ -284,8 +284,8 @@ export default function Home() {
             After purchase, the app can continue to work offline for a limited time. When internet access becomes available again, Canvex Display can re-check entitlement automatically in the background. If entitlement is no longer valid, streaming access may be paused until verification succeeds.
           </p>
 
-          <a 
-            href="[PLAY_STORE_URL]" 
+          <a
+            href="[PLAY_STORE_URL]"
             className="inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-8 py-4 rounded-xl font-semibold transition-all"
           >
             <Play className="w-5 h-5 fill-current" />
@@ -302,49 +302,49 @@ export default function Home() {
           </div>
 
           <div className="border-t border-white/5">
-            <AccordionItem 
-              question="What is Canvex Display?" 
-              answer="Canvex Display is a Windows host and Android client system for low-latency desktop streaming, touch input, pen input, audio support, and session control." 
+            <AccordionItem
+              question="What is Canvex Display?"
+              answer="Canvex Display is a Windows host and Android client system for low-latency desktop streaming, touch input, pen input, audio support, and session control."
             />
-            <AccordionItem 
-              question="Do I need to install a separate driver?" 
-              answer="No. Standard Canvex Display installation uses the Windows host app only." 
+            <AccordionItem
+              question="Do I need to install a separate driver?"
+              answer="No. Standard Canvex Display installation uses the Windows host app only."
             />
-            <AccordionItem 
-              question="Does Canvex Display work over Wi-Fi?" 
-              answer="Yes. Wi-Fi is the default connection method." 
+            <AccordionItem
+              question="Does Canvex Display work over Wi-Fi?"
+              answer="Yes. Wi-Fi is the default connection method."
             />
-            <AccordionItem 
-              question="Does Canvex Display support USB?" 
-              answer="Yes, USB convenience routing can be supported when the environment allows it." 
+            <AccordionItem
+              question="Does Canvex Display support USB?"
+              answer="Yes, USB convenience routing can be supported when the environment allows it."
             />
-            <AccordionItem 
-              question="Can I use touch input from my Android device?" 
-              answer="Yes. Canvex Display supports touch input forwarding to the Windows host." 
+            <AccordionItem
+              question="Can I use touch input from my Android device?"
+              answer="Yes. Canvex Display supports touch input forwarding to the Windows host."
             />
-            <AccordionItem 
-              question="Does stylus or pen input work?" 
-              answer="Yes. Pen input is part of the product direction, including pressure-aware workflows where supported by the device and host path." 
+            <AccordionItem
+              question="Does stylus or pen input work?"
+              answer="Yes. Pen input is part of the product direction, including pressure-aware workflows where supported by the device and host path."
             />
-            <AccordionItem 
-              question="Does it support audio?" 
-              answer="Yes, host audio streaming is supported. In some host or route configurations, audio may be unavailable and may be disabled automatically." 
+            <AccordionItem
+              question="Does it support audio?"
+              answer="Yes, host audio streaming is supported. In some host or route configurations, audio may be unavailable and may be disabled automatically."
             />
-            <AccordionItem 
-              question="Why is the screen black or slow to start?" 
-              answer="This can happen during route changes, decoder startup, or unstable network conditions. Wait a few seconds first. If needed, use Request Keyframe from the session controls." 
+            <AccordionItem
+              question="Why is the screen black or slow to start?"
+              answer="This can happen during route changes, decoder startup, or unstable network conditions. Wait a few seconds first. If needed, use Request Keyframe from the session controls."
             />
-            <AccordionItem 
-              question="Can I use more than one client at the same time?" 
-              answer="Not in the standard model. The current host runtime supports one active stream at a time." 
+            <AccordionItem
+              question="Can I use more than one client at the same time?"
+              answer="Not in the standard model. The current host runtime supports one active stream at a time."
             />
-            <AccordionItem 
-              question="Is the stream secure?" 
-              answer="Yes. Canvex Display uses secure pairing and encrypted session transport." 
+            <AccordionItem
+              question="Is the stream secure?"
+              answer="Yes. Canvex Display uses secure pairing and encrypted session transport."
             />
-            <AccordionItem 
-              question="How is the Android app licensed?" 
-              answer="The Android app uses Google Play entitlement. Streaming can be unlocked by a one-time purchase and may periodically revalidate in the background." 
+            <AccordionItem
+              question="How is the Android app licensed?"
+              answer="The Android app uses Google Play entitlement. Streaming can be unlocked by a one-time purchase and may periodically revalidate in the background."
             />
           </div>
         </div>
