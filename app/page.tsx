@@ -122,7 +122,8 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-display font-semibold text-white mb-2">Windows Host</h3>
               <p className="text-slate-400 mb-8 flex-grow">
-                Install the Windows host app to stream your desktop to Android. (Windows 10/11 x64 required)
+                Install the Windows host app to stream your desktop to Android.<br />
+                <span className="text-sm opacity-80">(Windows 10/11 x64 required)</span>
               </p>
               <a
                 href="/downloads/CanvexDisplay_Setup_0.3.0.msi"
