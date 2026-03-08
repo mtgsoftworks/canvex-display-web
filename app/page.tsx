@@ -305,11 +305,11 @@ export default function Home() {
           <div className="border-t border-white/5">
             <AccordionItem
               question="What is Canvex Display?"
-              answer="Canvex Display is a Windows host and Android client system for low-latency desktop streaming, touch input, pen input, audio support, and session control."
+              answer="Canvex Display is a high-performance streaming solution that extends your Windows desktop to Android devices. It delivers ultra-low latency mirroring, advanced touch/pen input forwarding, and seamless session control over your local network."
             />
             <AccordionItem
               question="Do I need to install a separate driver?"
-              answer="No. Standard Canvex Display installation uses the Windows host app only."
+              answer="No virtual display drivers or complex system modifications are required. Simply install the lightweight Windows host application and you are ready to stream."
             />
             <AccordionItem
               question="Does Canvex Display work over Wi-Fi?"
@@ -317,7 +317,7 @@ export default function Home() {
             />
             <AccordionItem
               question="Does Canvex Display support USB?"
-              answer="Yes, USB convenience routing can be supported when the environment allows it."
+              answer="Yes. While Wi-Fi is the primary and recommended connection method, Canvex Display supports USB tethering and ADB-based routing for ultra-stable, zero-interference environments where available."
             />
             <AccordionItem
               question="Can I use touch input from my Android device?"
@@ -341,7 +341,11 @@ export default function Home() {
             />
             <AccordionItem
               question="Is the stream secure?"
-              answer="Yes. Canvex Display uses secure pairing and encrypted session transport."
+              answer="Absolutely. All communication remains strictly on your local network. We utilize industry-standard authenticated encryption (AES-128-GCM) for both media transport and session control, paired via secure ECDH key exchange."
+            />
+            <AccordionItem
+              question="Can I play games over this connection?"
+              answer="Canvex Display is optimized for high-fidelity desktop extension, remote administration, and creative workflows (like pen input). While the latency is extremely low, it is not explicitly designed as a dedicated competitive cloud-gaming protocol."
             />
             <AccordionItem
               question="How is the Android app licensed?"
