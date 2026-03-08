@@ -14,18 +14,11 @@ export function Footer() {
           <p className="text-slate-400 text-sm max-w-sm mb-6">
             Low-latency remote display and control for Windows and Android.
           </p>
-          <a 
-            href="/api/download" 
-            className="inline-flex items-center gap-2 text-sm text-cyan-400 hover:text-cyan-300 transition-colors bg-cyan-400/10 hover:bg-cyan-400/20 px-4 py-2 rounded-lg border border-cyan-400/20"
-          >
-            <Download className="w-4 h-4" />
-            Download Source Code
-          </a>
           <p className="text-slate-500 text-xs mt-6">
             &copy; 2026 MTG Softworks. All Rights Reserved.
           </p>
         </div>
-        
+
         <div>
           <h4 className="font-display font-semibold text-white mb-4">Product</h4>
           <ul className="space-y-2">
