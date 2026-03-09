@@ -60,7 +60,7 @@ export default function Home() {
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <a
-              href="[PLAY_STORE_URL]"
+              href="https://play.google.com/store/apps/details?id=com.mtgsoftworks.canvex.display"
               className="w-full sm:w-auto flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
             >
               <Play className="w-5 h-5 fill-current" />
@@ -107,7 +107,7 @@ export default function Home() {
                 Install the Canvex Display mobile app on your Android phone or tablet. Android 8.0+ recommended.
               </p>
               <a
-                href="[PLAY_STORE_URL]"
+                href="https://play.google.com/store/apps/details?id=com.mtgsoftworks.canvex.display"
                 className="w-full flex items-center justify-center gap-2 bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 border border-cyan-500/20 px-6 py-3 rounded-xl font-medium transition-all"
               >
                 <Play className="w-5 h-5" />
@@ -286,7 +286,7 @@ export default function Home() {
           </p>
 
           <a
-            href="[PLAY_STORE_URL]"
+            href="https://play.google.com/store/apps/details?id=com.mtgsoftworks.canvex.display"
             className="inline-flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-8 py-4 rounded-xl font-semibold transition-all"
           >
             <Play className="w-5 h-5 fill-current" />
