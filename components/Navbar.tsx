@@ -22,13 +22,14 @@ export function Navbar() {
           <Link href="/#how-it-works" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">How It Works</Link>
           <Link href="/#setup" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Setup</Link>
           <Link href="/#faq" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</Link>
-          <Link href="/#download" className="text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-4 py-2 rounded-full hover:bg-cyan-500 hover:text-slate-950 transition-all">
-            Download
-          </Link>
+          <Link href="/#download" className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Download</Link>
+          <a href="https://play.google.com/store/apps/details?id=com.mtgsoftworks.canvex.display" className="text-sm font-medium bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 px-4 py-2 rounded-full hover:bg-cyan-500 hover:text-slate-950 transition-all">
+            Free Trial
+          </a>
         </nav>
 
         {/* Mobile Menu Toggle */}
-        <button 
+        <button
           className="md:hidden p-2 text-slate-300 hover:text-white"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
@@ -43,7 +44,8 @@ export function Navbar() {
           <Link href="/#how-it-works" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-slate-300 hover:text-white transition-colors">How It Works</Link>
           <Link href="/#setup" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Setup</Link>
           <Link href="/#faq" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-slate-300 hover:text-white transition-colors">FAQ</Link>
-          <Link href="/#download" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-cyan-400">Download</Link>
+          <Link href="/#download" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-slate-300 hover:text-white transition-colors">Download</Link>
+          <a href="https://play.google.com/store/apps/details?id=com.mtgsoftworks.canvex.display" onClick={() => setIsMobileMenuOpen(false)} className="text-sm font-medium text-cyan-400">Free Trial</a>
         </div>
       )}
     </header>

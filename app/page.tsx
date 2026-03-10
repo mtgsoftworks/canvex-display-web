@@ -56,6 +56,16 @@ export default function Home() {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+            className="flex flex-col items-center justify-center gap-1 mb-8"
+          >
+            <span className="text-xl font-display font-semibold text-white">Try Canvex Display free for 7 days.</span>
+            <span className="text-slate-400">Full features. No commitment.</span>
+          </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
@@ -64,7 +74,7 @@ export default function Home() {
               className="w-full sm:w-auto flex items-center justify-center gap-2 bg-cyan-500 hover:bg-cyan-400 text-slate-950 px-8 py-4 rounded-xl font-semibold transition-all shadow-[0_0_20px_rgba(34,211,238,0.3)] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
             >
               <Play className="w-5 h-5 fill-current" />
-              Get it on Google Play
+              Start Free Trial
             </a>
             <a
               href="/downloads/CanvexDisplay_Setup_1.0.0.msi"
@@ -81,9 +91,11 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-slate-500 font-medium"
           >
-            <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Secure pairing</span>
-            <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Wi-Fi & USB</span>
-            <span className="flex items-center gap-2"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Touch & pen input</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Up to 4K & 120 FPS</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Ultra-low latency</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Touch & pen input</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Wi-Fi & USB routing</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Secure pairing</span>
           </motion.div>
         </div>
       </section>
@@ -104,7 +116,8 @@ export default function Home() {
               </div>
               <h3 className="text-2xl font-display font-semibold text-white mb-2">Android App</h3>
               <p className="text-slate-400 mb-8 flex-grow">
-                Install the Canvex Display mobile app on your Android phone or tablet. Android 8.0+ recommended.
+                Install the Canvex Display mobile app on your Android phone or tablet. Android 8.0+ recommended.<br />
+                <span className="text-cyan-400 font-medium">Includes a 7-day free trial.</span>
               </p>
               <a
                 href="https://play.google.com/store/apps/details?id=com.mtgsoftworks.canvex.display"
@@ -269,6 +282,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 gap-6 text-left mb-10 max-w-2xl mx-auto">
             <div className="bg-slate-950 border border-white/10 p-6 rounded-2xl">
               <ul className="space-y-3 text-slate-300 text-sm">
+                <li className="flex items-start gap-2"><CheckCircle2 className="w-5 h-5 text-cyan-500 shrink-0" /> 7-day free trial</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-5 h-5 text-cyan-500 shrink-0" /> One-time purchase model</li>
                 <li className="flex items-start gap-2"><CheckCircle2 className="w-5 h-5 text-cyan-500 shrink-0" /> Device checks handled in the background</li>
               </ul>
@@ -349,7 +363,7 @@ export default function Home() {
             />
             <AccordionItem
               question="How is the Android app licensed?"
-              answer="The Android app uses Google Play entitlement. Streaming can be unlocked by a one-time purchase and may periodically revalidate in the background."
+              answer="The Android app uses Google Play entitlement. You can try the app for free with a 7-day trial. After the trial, streaming can be unlocked by a one-time purchase. Entitlement may periodically revalidate in the background."
             />
           </div>
         </div>
