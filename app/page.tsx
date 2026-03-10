@@ -67,7 +67,7 @@ export default function Home() {
               Get it on Google Play
             </a>
             <a
-              href="/downloads/CanvexDisplay_Setup_0.3.0.msi"
+              href="/downloads/CanvexDisplay_Setup_1.0.0.msi"
               className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-xl font-semibold transition-all"
             >
               <Download className="w-5 h-5" />
@@ -126,7 +126,7 @@ export default function Home() {
                 <span className="text-sm opacity-80">(Windows 10/11 x64 required)</span>
               </p>
               <a
-                href="/downloads/CanvexDisplay_Setup_0.3.0.msi"
+                href="/downloads/CanvexDisplay_Setup_1.0.0.msi"
                 className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-6 py-3 rounded-xl font-medium transition-all"
               >
                 <Download className="w-5 h-5" />
