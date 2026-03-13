@@ -91,7 +91,7 @@ export default function Home() {
             transition={{ duration: 0.5, delay: 0.5 }}
             className="mt-12 flex flex-wrap justify-center gap-6 text-sm text-slate-500 font-medium"
           >
-            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Up to 4K & 120 FPS</span>
+            <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Up to 2K & 120 FPS</span>
             <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Ultra-low latency</span>
             <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Touch & pen input</span>
             <span className="flex items-center gap-1.5"><CheckCircle2 className="w-4 h-4 text-cyan-500" /> Wi-Fi & USB routing</span>
