@@ -17,6 +17,7 @@ import {
   CheckCircle2
 } from 'lucide-react';
 import { AccordionItem } from '@/components/Accordion';
+import { Logo } from '@/components/Logo';
 
 export default function Home() {
   return (
@@ -25,6 +26,15 @@ export default function Home() {
       <section className="relative pt-32 pb-20 md:pt-48 md:pb-32 overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_center,rgba(34,211,238,0.15)_0%,rgba(10,15,20,0)_50%)]" />
         <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mb-8"
+          >
+            <Logo className="w-28 h-28 drop-shadow-[0_0_25px_rgba(34,211,238,0.4)]" />
+          </motion.div>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
