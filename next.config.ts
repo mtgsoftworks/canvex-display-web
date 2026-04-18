@@ -1,8 +1,5 @@
 import type {NextConfig} from 'next';
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH?.replace(/\/$/, '') || '';
-const isStaticExport = process.env.BUILD_STATIC_EXPORT === 'true';
-
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   eslint: {
@@ -13,7 +10,6 @@ const nextConfig: NextConfig = {
   },
   // Allow access to remote image placeholder.
   images: {
-    unoptimized: isStaticExport,
     remotePatterns: [
       {
         protocol: 'https',
@@ -23,10 +19,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  output: isStaticExport ? 'export' : 'standalone',
-  trailingSlash: isStaticExport,
-  basePath,
-  assetPrefix: basePath || undefined,
+  output: 'standalone',
   transpilePackages: ['motion'],
   webpack: (config, {dev}) => {
     // HMR is disabled in AI Studio via DISABLE_HMR env var.
