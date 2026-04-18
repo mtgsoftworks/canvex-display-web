@@ -32,6 +32,16 @@ yarn dev      # or npm run dev
 ```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
+## GitHub Pages Deployment
+This repository includes a GitHub Actions workflow at `.github/workflows/deploy-pages.yml` that builds and deploys the static export to GitHub Pages.
+
+To publish:
+1. Open **Settings → Pages** in the repository.
+2. Set **Source** to **GitHub Actions**.
+3. Push to the `main` branch (or run the workflow manually from Actions).
+
+The workflow exports static files to `out/` and deploys them automatically.
+
 ## Structure
 - `/app` - Next.js App Router pages (Home, Privacy, Terms, Support)
 - `/components` - Modular React components (Navbar, Footer, Accordion)

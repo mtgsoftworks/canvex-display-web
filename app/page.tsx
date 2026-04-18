@@ -20,6 +20,9 @@ import { AccordionItem } from '@/components/Accordion';
 import { Logo } from '@/components/Logo';
 
 export default function Home() {
+  const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+  const windowsHostDownloadPath = `${basePath}/downloads/CanvexDisplay_Setup_1.0.3.msi`;
+
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -87,7 +90,7 @@ export default function Home() {
               Start Free Trial
             </a>
             <a
-              href="/downloads/CanvexDisplay_Setup_1.0.3.msi"
+              href={windowsHostDownloadPath}
               className="w-full sm:w-auto flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-8 py-4 rounded-xl font-semibold transition-all"
             >
               <Download className="w-5 h-5" />
@@ -149,7 +152,7 @@ export default function Home() {
                 <span className="text-sm opacity-80">(Windows 10/11 x64 required)</span>
               </p>
               <a
-                href="/downloads/CanvexDisplay_Setup_1.0.3.msi"
+                href={windowsHostDownloadPath}
                 className="w-full flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-white border border-white/10 px-6 py-3 rounded-xl font-medium transition-all"
               >
                 <Download className="w-5 h-5" />
