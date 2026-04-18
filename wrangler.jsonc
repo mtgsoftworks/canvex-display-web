@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "canvex-display-web",
+  "compatibility_date": "2026-04-18",
+  "observability": {
+    "enabled": true
+  },
+  "compatibility_flags": [
+    "nodejs_compat"
+  ]
+}

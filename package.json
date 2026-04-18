@@ -7,7 +7,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "clean": "next clean"
+    "clean": "next clean",
+    "deploy": "opennextjs-cloudflare build && wrangler deploy",
+    "preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview"
   },
   "dependencies": {
     "@google/genai": "^1.17.0",
