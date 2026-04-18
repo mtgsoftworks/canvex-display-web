@@ -1,15 +1,10 @@
-'use client';
-
-import Link from 'next/link';
 import { motion } from 'motion/react';
 import {
   MonitorSmartphone,
   Download,
   Play,
   Wifi,
-  Usb,
   Lock,
-  MousePointer2,
   PenTool,
   Volume2,
   ClipboardCopy,
@@ -19,7 +14,7 @@ import {
 import { AccordionItem } from '@/components/Accordion';
 import { Logo } from '@/components/Logo';
 
-export default function Home() {
+export function HomePage() {
   return (
     <div className="flex flex-col min-h-screen">
       {/* Hero Section */}
@@ -169,46 +164,14 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <FeatureCard
-              icon={<Activity className="w-6 h-6 text-cyan-400" />}
-              title="Low-latency display"
-              description="Stream the active Windows desktop to Android with a responsive, session-oriented pipeline."
-            />
-            <FeatureCard
-              icon={<PenTool className="w-6 h-6 text-cyan-400" />}
-              title="Touch and pen input"
-              description="Control host apps using tablet touch or stylus input, including pressure-aware pen workflows where supported."
-            />
-            <FeatureCard
-              icon={<Wifi className="w-6 h-6 text-cyan-400" />}
-              title="Wi-Fi and USB"
-              description="Use your local network by default, or switch to USB convenience routing when available."
-            />
-            <FeatureCard
-              icon={<Lock className="w-6 h-6 text-cyan-400" />}
-              title="Secure pairing"
-              description="Pair devices with a one-time code and keep trusted hosts available for quick reconnects."
-            />
-            <FeatureCard
-              icon={<Lock className="w-6 h-6 text-cyan-400" />}
-              title="Encrypted transport"
-              description="Control and media paths use authenticated session setup and encrypted transport."
-            />
-            <FeatureCard
-              icon={<Volume2 className="w-6 h-6 text-cyan-400" />}
-              title="Audio streaming"
-              description="Stream host audio to Android when supported by the current route and host runtime."
-            />
-            <FeatureCard
-              icon={<ClipboardCopy className="w-6 h-6 text-cyan-400" />}
-              title="Clipboard & files"
-              description="Move text and files between devices with built-in transfer and clipboard tools."
-            />
-            <FeatureCard
-              icon={<Activity className="w-6 h-6 text-cyan-400" />}
-              title="Adaptive quality"
-              description="Canvex monitors runtime conditions and adjusts stream behavior to improve startup and stability."
-            />
+            <FeatureCard icon={<Activity className="w-6 h-6 text-cyan-400" />} title="Low-latency display" description="Stream the active Windows desktop to Android with a responsive, session-oriented pipeline." />
+            <FeatureCard icon={<PenTool className="w-6 h-6 text-cyan-400" />} title="Touch and pen input" description="Control host apps using tablet touch or stylus input, including pressure-aware pen workflows where supported." />
+            <FeatureCard icon={<Wifi className="w-6 h-6 text-cyan-400" />} title="Wi-Fi and USB" description="Use your local network by default, or switch to USB convenience routing when available." />
+            <FeatureCard icon={<Lock className="w-6 h-6 text-cyan-400" />} title="Secure pairing" description="Pair devices with a one-time code and keep trusted hosts available for quick reconnects." />
+            <FeatureCard icon={<Lock className="w-6 h-6 text-cyan-400" />} title="Encrypted transport" description="Control and media paths use authenticated session setup and encrypted transport." />
+            <FeatureCard icon={<Volume2 className="w-6 h-6 text-cyan-400" />} title="Audio streaming" description="Stream host audio to Android when supported by the current route and host runtime." />
+            <FeatureCard icon={<ClipboardCopy className="w-6 h-6 text-cyan-400" />} title="Clipboard & files" description="Move text and files between devices with built-in transfer and clipboard tools." />
+            <FeatureCard icon={<Activity className="w-6 h-6 text-cyan-400" />} title="Adaptive quality" description="Canvex monitors runtime conditions and adjusts stream behavior to improve startup and stability." />
           </div>
         </div>
       </section>
@@ -224,7 +187,6 @@ export default function Home() {
           </div>
 
           <div className="grid md:grid-cols-3 gap-8 relative">
-            {/* Connecting Line */}
             <div className="hidden md:block absolute top-12 left-[15%] right-[15%] h-[1px] bg-gradient-to-r from-transparent via-cyan-500/30 to-transparent" />
 
             <div className="relative text-center">
@@ -327,54 +289,18 @@ export default function Home() {
           </div>
 
           <div className="border-t border-white/5">
-            <AccordionItem
-              question="What is Canvex Display?"
-              answer="Canvex Display is a high-performance streaming solution that extends your Windows desktop to Android devices. It delivers ultra-low latency mirroring, advanced touch/pen input forwarding, and seamless session control over your local network."
-            />
-            <AccordionItem
-              question="Do I need to install a separate driver?"
-              answer="No virtual display drivers or complex system modifications are required. Simply install the lightweight Windows host application and you are ready to stream."
-            />
-            <AccordionItem
-              question="Does Canvex Display work over Wi-Fi?"
-              answer="Yes. Wi-Fi is the default connection method."
-            />
-            <AccordionItem
-              question="Does Canvex Display support USB?"
-              answer="Yes. While Wi-Fi is the primary and recommended connection method, Canvex Display supports USB tethering and ADB-based routing for ultra-stable, zero-interference environments where available."
-            />
-            <AccordionItem
-              question="Can I use touch input from my Android device?"
-              answer="Yes. Canvex Display supports touch input forwarding to the Windows host."
-            />
-            <AccordionItem
-              question="Does stylus or pen input work?"
-              answer="Yes. Pen input is part of the product direction, including pressure-aware workflows where supported by the device and host path."
-            />
-            <AccordionItem
-              question="Does it support audio?"
-              answer="Yes, host audio streaming is supported. In some host or route configurations, audio may be unavailable and may be disabled automatically."
-            />
-            <AccordionItem
-              question="Why is the screen black or slow to start?"
-              answer="This can happen during route changes, decoder startup, or unstable network conditions. Wait a few seconds first. If needed, use Request Keyframe from the session controls."
-            />
-            <AccordionItem
-              question="Can I use more than one client at the same time?"
-              answer="Not in the standard model. The current host runtime supports one active stream at a time."
-            />
-            <AccordionItem
-              question="Is the stream secure?"
-              answer="Absolutely. All communication remains strictly on your local network. We utilize industry-standard authenticated encryption (AES-128-GCM) for both media transport and session control, paired via secure ECDH key exchange."
-            />
-            <AccordionItem
-              question="Can I play games over this connection?"
-              answer="Canvex Display is optimized for high-fidelity desktop extension, remote administration, and creative workflows (like pen input). While the latency is extremely low, it is not explicitly designed as a dedicated competitive cloud-gaming protocol."
-            />
-            <AccordionItem
-              question="How is the Android app licensed?"
-              answer="The Android app uses Google Play entitlement. You can try the app for free with a 7-day trial. After the trial, streaming can be unlocked by a one-time purchase. Entitlement may periodically revalidate in the background."
-            />
+            <AccordionItem question="What is Canvex Display?" answer="Canvex Display is a high-performance streaming solution that extends your Windows desktop to Android devices. It delivers ultra-low latency mirroring, advanced touch/pen input forwarding, and seamless session control over your local network." />
+            <AccordionItem question="Do I need to install a separate driver?" answer="No virtual display drivers or complex system modifications are required. Simply install the lightweight Windows host application and you are ready to stream." />
+            <AccordionItem question="Does Canvex Display work over Wi-Fi?" answer="Yes. Wi-Fi is the default connection method." />
+            <AccordionItem question="Does Canvex Display support USB?" answer="Yes. While Wi-Fi is the primary and recommended connection method, Canvex Display supports USB tethering and ADB-based routing for ultra-stable, zero-interference environments where available." />
+            <AccordionItem question="Can I use touch input from my Android device?" answer="Yes. Canvex Display supports touch input forwarding to the Windows host." />
+            <AccordionItem question="Does stylus or pen input work?" answer="Yes. Pen input is part of the product direction, including pressure-aware workflows where supported by the device and host path." />
+            <AccordionItem question="Does it support audio?" answer="Yes, host audio streaming is supported. In some host or route configurations, audio may be unavailable and may be disabled automatically." />
+            <AccordionItem question="Why is the screen black or slow to start?" answer="This can happen during route changes, decoder startup, or unstable network conditions. Wait a few seconds first. If needed, use Request Keyframe from the session controls." />
+            <AccordionItem question="Can I use more than one client at the same time?" answer="Not in the standard model. The current host runtime supports one active stream at a time." />
+            <AccordionItem question="Is the stream secure?" answer='Absolutely. All communication remains strictly on your local network. We utilize industry-standard authenticated encryption (AES-128-GCM) for both media transport and session control, paired via secure ECDH key exchange.' />
+            <AccordionItem question="Can I play games over this connection?" answer="Canvex Display is optimized for high-fidelity desktop extension, remote administration, and creative workflows (like pen input). While the latency is extremely low, it is not explicitly designed as a dedicated competitive cloud-gaming protocol." />
+            <AccordionItem question="How is the Android app licensed?" answer="The Android app uses Google Play entitlement. You can try the app for free with a 7-day trial. After the trial, streaming can be unlocked by a one-time purchase. Entitlement may periodically revalidate in the background." />
           </div>
         </div>
       </section>

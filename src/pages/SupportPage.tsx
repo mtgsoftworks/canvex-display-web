@@ -1,19 +1,13 @@
-import { Metadata } from 'next';
-import Link from 'next/link';
+import { Link } from 'react-router-dom';
 
-export const metadata: Metadata = {
-  title: 'Support | Canvex Display',
-  description: 'Support and troubleshooting for Canvex Display.',
-};
-
-export default function SupportPage() {
+export function SupportPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-24">
       <h1 className="text-4xl font-display font-bold text-white mb-8">Support</h1>
       
       <div className="max-w-none">
         <p className="text-slate-300 text-lg mb-12">
-          If you need help with installation, pairing, entitlement, or connection issues, start with the <Link href="/#setup" className="text-cyan-400 hover:underline">setup</Link> and <Link href="/#faq" className="text-cyan-400 hover:underline">FAQ</Link> pages. If you still need help, contact MTG Softworks.
+          If you need help with installation, pairing, entitlement, or connection issues, start with the <a href="/#setup" className="text-cyan-400 hover:underline">setup</a> and <a href="/#faq" className="text-cyan-400 hover:underline">FAQ</a> pages. If you still need help, contact MTG Softworks.
         </p>
 
         <h2 className="text-2xl font-display font-semibold text-white mt-12 mb-6">Troubleshooting</h2>

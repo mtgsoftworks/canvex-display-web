@@ -1,11 +1,4 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Terms of Use | Canvex Display',
-  description: 'Terms of Use for Canvex Display.',
-};
-
-export default function TermsPage() {
+export function TermsPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-24">
       <h1 className="text-4xl font-display font-bold text-white mb-2">Terms of Use</h1>

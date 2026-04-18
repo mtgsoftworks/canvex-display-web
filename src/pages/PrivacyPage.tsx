@@ -1,11 +1,4 @@
-import { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'Privacy Policy | Canvex Display',
-  description: 'Privacy Policy for Canvex Display.',
-};
-
-export default function PrivacyPage() {
+export function PrivacyPage() {
   return (
     <div className="max-w-3xl mx-auto px-6 py-24">
       <h1 className="text-4xl font-display font-bold text-white mb-2">Privacy Policy</h1>
